@@ -1,7 +1,7 @@
 import oauth2 as oauth
 
 from django.contrib.sites.shortcuts import get_current_site
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 from .responses import invalid_params_response, INVALID_CONSUMER_RESPONSE, could_not_verify_oauth_request_response, invalid_scope_response
 from .utils import send_oauth_error, get_oauth_request, verify_oauth_request

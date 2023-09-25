@@ -11,7 +11,7 @@ PROJECT_ROOT = dirname(dirname(SETTINGS_DIR))
 
 config = RawConfigParser()
 config.read(SETTINGS_DIR+'/settings.ini')
-
+print("Setting: " + SETTINGS_DIR)
 # If you want to debug
 DEBUG = config.getboolean('debug', 'DEBUG')
 
@@ -85,6 +85,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = path.join(PROJECT_ROOT, 'media')
+print("MEDIA_ROOT: "+MEDIA_ROOT)
 # Paths for xapi media
 AGENT_PROFILE_UPLOAD_TO = "agent_profile"
 ACTIVITY_STATE_UPLOAD_TO = "activity_state"

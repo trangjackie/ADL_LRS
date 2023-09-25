@@ -19,7 +19,7 @@ def setup_lrs():
     statement_attachments = 'attachment_payloads'
 
     # # Add env packages and project to the path
-    # cwd = os.path.dirname(os.path.abspath(__file__))
+    cwd = os.path.dirname(os.path.abspath(__file__))
 
     if cwd not in sys.path:
         sys.path.append(cwd)
@@ -48,10 +48,13 @@ def setup_lrs():
     if not os.path.exists(nginx_log_dir):
         os.makedirs(nginx_log_dir)
 
+    print("nginx_log_dir: "+nginx_log_dir)
     # Add settings module so fab file can see it
     os.environ['DJANGO_SETTINGS_MODULE'] = "adl_lrs.settings"
     from django.conf import settings
+    #print(settings)
     adldir = settings.MEDIA_ROOT
+    print("Media root: "+ adldir)
 
     # Create media directories
     if not os.path.exists(os.path.join(adldir, activity_profile)):

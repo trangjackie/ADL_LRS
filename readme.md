@@ -33,3 +33,18 @@ We welcome contributions to this project. Fork this repository, make changes, an
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+# Trang note
+
+update to python3
+
+```
+python3 -m pip install celery
+python3 -m pip install captcha jsonify django-cors-headers  django-defender psycopg2-binary isodate oauth2 pycryptodome django-recaptcha rfc3987 bcoding
+```
+
+Remove some thing
+```
+sudo apt-get remove python3-openssl
+```
+
+Install redis
